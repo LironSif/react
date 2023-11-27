@@ -13,6 +13,7 @@ export function Box2 () {
     return (
         <div style={{...flex,backgroundColor: 'blue'}}>
              <Box3/>
+             
         </div>
     )
 }

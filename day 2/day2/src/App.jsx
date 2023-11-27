@@ -1,16 +1,10 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '../public/vite.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-import {AddNums , HelloWorld , LengthCheck} from './components/HelloWorld'
-import { Box1, Box2, Box3, Box4 } from './components/Boxes'
+
 function App() {
   const [count, setCount] = useState(0)
-  const data = ["hello", "world"];
-  const number1 = 5;
-  const number2 = 6;
-  const string = "I love React!"
-
 
   return (
     <>
@@ -22,22 +16,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>AppleSeeds React App</h1>
-      < HelloWorld data={data} line={1}/>
-      < AddNums num1={number1} num2={number2}/>
-      <LengthCheck str={string}/>
-
-      <div style={{width: '60vw', height:'30vh', border: "1px solid black"}}>
-        <Box1>
-          <Box2>
-            <Box3>
-              <Box4/>
-            </Box3>
-          </Box2>
-        </Box1>
-      </div>
+      <h1>Vite + React</h1>
       <div className="card">
-    
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
