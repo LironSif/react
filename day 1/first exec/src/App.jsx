@@ -4,6 +4,8 @@ import viteLogo from '../public/vite.svg'
 import './App.css'
 import {AddNums , HelloWorld , LengthCheck} from './components/HelloWorld'
 import { Box1, Box2, Box3, Box4 } from './components/Boxes'
+import QuizContianer from './components/Quiz/QuizContianer'
+import { Button } from './components/Button/Button'
 function App() {
   const [count, setCount] = useState(0)
   const data = ["hello", "world"];
@@ -14,7 +16,11 @@ function App() {
 
   return (
     <>
-      <div>
+    <QuizContianer/>
+    <Button style={{ fontWeight: 'bold' }} title='Important' />
+    <Button title= 'Not Importent'/>
+    
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -47,7 +53,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </>
   )
 }
