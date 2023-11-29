@@ -6,6 +6,10 @@ import {AddNums , HelloWorld , LengthCheck} from './components/HelloWorld'
 import { Box1, Box2, Box3, Box4 } from './components/Boxes'
 import QuizContianer from './components/Quiz/QuizContianer'
 import { Button } from './components/Button/Button'
+import { Card } from './components/Card/Card.jsx'
+import myData from './assets/data.js';
+
+
 function App() {
   const [count, setCount] = useState(0)
   const data = ["hello", "world"];
@@ -13,13 +17,25 @@ function App() {
   const number2 = 6;
   const string = "I love React!"
 
-
+console.log(myData)
   return (
     <>
     <QuizContianer/>
     <Button style={{ fontWeight: 'bold' }} title='Important' />
     <Button title= 'Not Importent'/>
-    
+
+
+    <div className='div-box'>
+   {myData.map((el,i) => (
+    <div className='single-card' key={i}>
+      <Card
+       title={el.title}
+       description={el.description}
+       eman={el.link}
+      />      
+    </div>
+   ))}
+      </div>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

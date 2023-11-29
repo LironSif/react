@@ -1,9 +1,15 @@
 #root {
-  max-width: 1280px;
+  width:100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+ .div-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+ }
 
 .logo {
   height: 6em;
